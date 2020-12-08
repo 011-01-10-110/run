@@ -1,0 +1,11 @@
+<!--components/list/list.wxml-->
+<view class="list">
+<!-- 图片显示 -->
+  <view class="img">
+    <slot name="img"></slot>
+  </view>
+  <!-- 标题 -->
+  <view class="title">
+    <slot name="title"></slot>
+  </view>
+</view>

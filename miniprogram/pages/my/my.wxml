@@ -1,0 +1,24 @@
+<!--pages/my/my.wxml-->
+<view >
+    <!-- 用户头像昵称 -->
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="width:180rpx;height:80rpx"
+      size="mini"
+    >
+      <image class="userinfo-img" src="{{avatarUrl}}"></image>
+    </button>
+    <view class="userinfo-nickname">
+      <text>{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <!-- 我的信息 -->
+  <view class="list" bindtap="mymessage" wx:for="{{list}}" wx:key="">
+    <image class="icon-left" src="{{item.icon}}"></image>
+    <text>{{item.text}}</text>
+    <image class="icon-right" src="../../images/right.png"></image>
+  </view>
+</view>

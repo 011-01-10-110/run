@@ -1,0 +1,15 @@
+<!--pages/items/items.wxml-->
+<view class="items">
+  <view class="header">
+    <text>{{title}}</text>
+  </view>
+  <view class="itemlists">
+    <view class="item" wx:for="{{itemlist}}" wx:key="itemlist">
+      <image src="{{item.img}}" data-reitem="{{item.title}}" bindtap="item"></image>
+      <view class="itemtext">
+        <view data-reitem="{{item.title}}" bindtap="item">{{item.title}}</view>
+        <text data-reitem="{{item.title}}" bindtap="item">{{item.content}}</text>
+      </view>
+    </view>
+  </view>
+</view>

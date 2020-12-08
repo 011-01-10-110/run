@@ -1,0 +1,28 @@
+<view class="guidance">
+  <!-- 轮播图 -->
+  <swiper indicator-dots="true" indicator-color="#fff" indicator-active-color="rgba(64, 160, 255, 0.849)" autoplay="true" circular="true">
+    <swiper-item  wx:for="{{swiperList}}" wx:key="swiperlist">
+    <image src="{{item.img}}"></image>
+      <text>{{item.title}}</text>
+    </swiper-item>
+  </swiper>
+  <!-- 分类 -->
+  <view class="classification">
+  <text>课程分类</text>
+    <view class="classitem" wx:for="{{classlist}}" wx:key="classlist">
+      <image src="{{item.img}}" data-id="{{item._id}}" bindtap="classitem"></image>
+      <view data-id="{{item._id}}" bindtap="classitem">{{item.title}}</view>
+    </view>
+  </view>
+  <!-- 推荐课程 -->
+  <view class="recommend">
+    <text>推荐课程</text>
+    <view class="recommenditem" wx:for="{{relist}}" wx:key="relist">
+      <image src="{{item.img}}" data-reitem="{{item.title}}" bindtap="reitem"></image>
+      <view class="recommendtext">
+        <view data-reitem="{{item.title}}" bindtap="reitem">{{item.title}}</view>
+        <text data-reitem="{{item.title}}" bindtap="reitem">{{item.content}}</text>
+      </view>
+    </view>
+  </view>
+</view>

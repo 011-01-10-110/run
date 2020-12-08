@@ -1,0 +1,66 @@
+<view>
+  <!-- 上部地图 -->
+  <map id="map" class="map" scale="{{scale}}" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}"
+    polyline="{{polyline}}" show-location="true" show-compass="true" enable-3D="true" enable-overlooking="true"
+    show-scale="true" enable-traffic="{{traffic}}">
+    <!-- 定位按钮 -->
+    <cover-view class="map_icon" bindtap="clearIcons">
+      <cover-image class="icon" src="../../images/map_icon.png"></cover-image>
+    </cover-view>
+    <!-- 路况按钮 -->
+    <cover-view class="map_icon map_traffic" bindtap="traffic">
+      <cover-image class="icon" src="../../images/traffic.png"></cover-image>
+    </cover-view>
+    <cover-view class="{{hidden == 'stop' ? 'cov' : 'hidden'}}">
+      <!-- 里程数 -->
+      <cover-view>
+        共跑了{{distance}}米
+      </cover-view>
+      <cover-view>
+        <!-- 速度 -->
+        平均速度为：{{speed}}m/s
+      </cover-view>
+    </cover-view>
+  </map>
+  <!-- 顶部信息 -->
+  <view class="top">
+    <view></view>
+  </view>
+  <!-- 底部 -->
+  <view class="bottom">
+    <!-- 信息 -->
+    <view class="message">
+      <!-- time -->
+      <view class="time">
+        <view class="{{hidden == 'start' ? '' : 'hidden'}}">
+          开始时间：{{starttime.timeh}}:{{starttime.timem}}:{{starttime.times}}
+        </view>
+        <view class="{{hidden == 'stop' ? '' : 'hidden'}}">
+          结束时间：{{stoptime.timeh}}:{{stoptime.timem}}:{{stoptime.times}}
+        </view>
+        <view class="{{hidden == 'stop' ? '' : 'hidden'}}">
+          运动时间：{{runtime.timeh}}:{{runtime.timem}}:{{runtime.times}}
+        </view>
+      </view>
+      <!-- 出发地 -->
+      <view class="{{hidden == 'now' ? 'address' : 'hidden'}}">
+        当前位置：<view>{{address}}</view>
+      </view>
+      <view class="{{hidden == 'start' ? 'address' : 'hidden'}}">
+        出发位置：<view>{{address}}</view>
+      </view>
+      <view class="{{hidden == 'stop' ? 'address' : 'hidden'}}">
+        结束位置：<view>{{address}}</view>
+      </view>
+    </view>
+    <!-- 按钮 -->
+    <view class="btns">
+      <button size="mini" class="btn" style="width:60px;height:25px" bindtap="startrun">
+        <view>开始</view>
+      </button>
+      <button size="mini" class="btn" style="width:60px;height:25px" bindtap="stoprun">
+        <view>停止</view>
+      </button>
+    </view>
+  </view>
+</view>

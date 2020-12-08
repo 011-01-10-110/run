@@ -1,0 +1,19 @@
+/* components/list/list.wxss */
+.list{
+  width: 200rpx;
+  height: auto;
+  background-color: rgba(209, 209, 209, 0.762);
+  text-align: center;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+.img{
+  width: 200rpx;
+  height: 150rpx;
+  line-height: 150rpx;
+}
+.title{
+  font-size: 12px;
+}

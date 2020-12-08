@@ -1,0 +1,107 @@
+/* pages/guidances/guidances.wxss */
+/* 全页面 */
+.guidance{
+  width: 96%;
+  margin: 0 auto;
+}
+/* 第二种 */
+swiper{
+  width: 100%;
+  height: 30vh;
+  margin-bottom: 15rpx;
+}
+swiper-item{
+  position: relative;
+}
+swiper-item image{
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+swiper-item text{
+  width: 100%;
+  display: block;
+  text-align: center;
+  position: absolute;
+  bottom: 50rpx;
+  color: #fff;
+}
+/* 课程分类 */
+.classification{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.classification text,.recommend text{
+  width: 100%;
+  display: block;
+  margin-bottom: 15rpx;
+}
+.classitem{
+  width: 48%;
+  height: 25vh;
+  margin: 0 1%;
+  margin-bottom: 15rpx;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.classitem image{
+  width: 100%;
+  height: 75%;
+  border-radius: 10px 10px 0 0;
+}
+.classitem view{
+  width: 90%;
+  height: 25%;
+  margin: 0 auto;
+  border-top: 1.5px #f6f6f6 solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 课程推荐 */
+.recommend{
+  width: 98%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.recommenditem{
+  width: 100%;
+  height: 18vh;
+  margin-bottom: 5rpx;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+.recommenditem image{
+  width: 35vw;
+  height: 96%;
+  margin: 3.5rpx 0 1.5rpx 0;
+  border-radius: 10px 0 0 10px;
+}
+.recommendtext{
+  width: 55vw;
+  height: 100%;
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.recommendtext view{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+/* 推荐课程内容超出两行隐藏 */
+.recommendtext text{
+  height: 50%;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

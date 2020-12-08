@@ -1,0 +1,60 @@
+/* pages/my/my.wxss */
+/* pages/mymessage/mymessage.wxss */
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.userinfo{
+  margin-top: 40rpx;
+  height: 140rpx;
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.userinfo-avatar{
+  padding: 0;
+  background: rgba(0,0,0,0);
+  position: relative;
+}
+.userinfo-img{
+  width:80rpx;
+  height:80rpx;
+  position: absolute;
+  left: 40rpx;
+}
+.userinfo-nickname{
+  margin-left: 50rpx;
+}
+/* 我的信息 */
+.list{
+  height: 100rpx;
+  width: 100%;
+  margin-top: 3px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+}
+.list text{
+  font-size: 17px;
+  margin-left: 50rpx;
+}
+.icon-left{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 50rpx;
+}
+.icon-right{
+  position: absolute;
+  width: 70rpx;
+  height: 70rpx;
+  right: 3%;
+}
