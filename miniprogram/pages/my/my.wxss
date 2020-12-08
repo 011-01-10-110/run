@@ -26,6 +26,7 @@ page {
 .userinfo-img{
   width:80rpx;
   height:80rpx;
+  border-radius: 50%;
   position: absolute;
   left: 40rpx;
 }
@@ -44,7 +45,7 @@ page {
   position: relative;
 }
 .list text{
-  font-size: 17px;
+  font-size: 34rpx;
   margin-left: 50rpx;
 }
 .icon-left{
